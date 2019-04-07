@@ -26,26 +26,26 @@ namespace Basic.Lesson_4._1
 
         public static void Switch_LessGreater_Example()
         {
-            int y = 2;
-            int x = 6;
+            //int y = 2;
+            //int x = 6;
 
-            switch (y - x)
-            {
-                case int r when r > 0:
-                    Console.WriteLine("y > x");
-                    break;
+            //switch (y - x)
+            //{
+            //    case int r when r > 0:
+            //        Console.WriteLine("y > x");
+            //        break;
 
-                case int r when r < 0:
-                    Console.WriteLine("y < x");
-                    break;
+            //    case int r when r < 0:
+            //        Console.WriteLine("y < x");
+            //        break;
 
-                case int r when r == 0:
-                    Console.WriteLine("y == x");
-                    break;
+            //    case int r when r == 0:
+            //        Console.WriteLine("y == x");
+            //        break;
 
-                default:
-                    break;
-            }
+            //    default:
+            //        break;
+            //}
         }
 
         public static void CyclesExample()
