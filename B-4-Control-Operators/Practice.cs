@@ -12,7 +12,25 @@ namespace Basic.Lesson_4._1
         //B4-P1/25. If_TimeOfDayGreeting
         public static void B4_P1_25_If_TimeOfDayGreeting()
         {
-            DateTime time = DateTime.N
+            string name = "blablabla";
+            var time = DateTime.Now.TimeOfDay.Hours;
+            if(time < 7)
+            {
+                Console.WriteLine("Good night! {0}", name);
+            }
+            else if(time >= 7 && time < 12)
+            {
+                Console.WriteLine("Good morning! {0}", name);
+            }
+            else if(time >= 12 && time <= 22 )
+            {
+                Console.WriteLine("Good day, good day! {0}", name);
+            }
+            else
+            {
+                Console.WriteLine("Good nught! {0}", name);
+            }
+
         }
 
         //B4-P2/25. If_NumbersComparing
@@ -39,26 +57,77 @@ namespace Basic.Lesson_4._1
         //B4-P6/25. Switch_GameNavigation
         public static void B4_P6_25_Switch_GameNavigation()
         {
-            
+            while (true)
+            {
+                //Label:
+                var input = Console.ReadKey().KeyChar;
+                switch (input)
+                {
+                    case 'w':
+                        Console.WriteLine("\nMove Forward.\n");
+                        
+                        break;
+                    case 'a':
+                        Console.WriteLine("\nMove Left.\n");
+                        break;
+                    case 's':
+                        Console.WriteLine("\nMove Back.\n");
+                        break;
+                    case 'd':
+                        Console.WriteLine("\nMove Right.\n");
+                        break;
+                    case 'q':
+                        return;
+                    default:
+                        Console.WriteLine("\nStay on place.\n");
+                        break;
+                }
+                //goto Label;
+            }
         }
 
         //B4-P7/25. For_10OddEven
         public static void B4_P7_25_For_10OddEven()
         {
-            
+            for (int i = 1; i < 10; i++)
+            {
+                Console.WriteLine("{0} \t {1}", i, i % 2 == 0 ? "Even" : "Odd");
+            }
         }
 
 
         //B4-P8/25. For_3DevideNumbers
         public static void B4_P8_25_For_3DevideNumbers()
         {
+            for (int i = 30; i > 0; i--)
+            {
+                if(i%3 == 0)
+                {
+                    Console.WriteLine("{0}", i);
+                }
+            }
         }
 
 
         //B4-P9/25. For_Matrix10x10
         public static void B4_P9_25_For_Matrix10x10()
         {
-           
+            string row = String.Empty;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    //Console.Write("{0}{1} ", i, j);
+                    row += " " + j.ToString();
+                    //Console.WriteLine("");
+                    if (j == 9)
+                    {
+                        Console.WriteLine(row);
+                        row = String.Empty;
+                    }
+                }
+                Console.WriteLine();
+            }
         }
 
 
